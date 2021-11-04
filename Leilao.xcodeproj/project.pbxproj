@@ -20,6 +20,7 @@
 		03FA4B29209354F50047D61B /* Leilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA4B28209354F50047D61B /* Leilao.swift */; };
 		64A8AED3272B0EDB00AEA7B7 /* AvaliadorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A8AED2272B0EDB00AEA7B7 /* AvaliadorTests.swift */; };
 		64A8AED5272B2B3800AEA7B7 /* CriadorDeLeilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A8AED4272B2B3800AEA7B7 /* CriadorDeLeilao.swift */; };
+		64FD57DF27344E9200ECBB05 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 64FD57DE27344E9200ECBB05 /* README.md */; };
 		A23F5A0F209CA483000E6525 /* Avaliador.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5A0E209CA483000E6525 /* Avaliador.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		03FA4B28209354F50047D61B /* Leilao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leilao.swift; sourceTree = "<group>"; };
 		64A8AED2272B0EDB00AEA7B7 /* AvaliadorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliadorTests.swift; sourceTree = "<group>"; };
 		64A8AED4272B2B3800AEA7B7 /* CriadorDeLeilao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriadorDeLeilao.swift; sourceTree = "<group>"; };
+		64FD57DE27344E9200ECBB05 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A23F5A0E209CA483000E6525 /* Avaliador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avaliador.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 		03FA4AE4209353270047D61B = {
 			isa = PBXGroup;
 			children = (
+				64FD57DE27344E9200ECBB05 /* README.md */,
 				03FA4AEF209353270047D61B /* Leilao */,
 				03FA4B07209353290047D61B /* LeilaoTests */,
 				03FA4B12209353290047D61B /* LeilaoUITests */,
@@ -276,6 +279,7 @@
 			files = (
 				03FA4AFE209353290047D61B /* LaunchScreen.storyboard in Resources */,
 				03FA4AFB209353290047D61B /* Assets.xcassets in Resources */,
+				64FD57DF27344E9200ECBB05 /* README.md in Resources */,
 				03FA4AF6209353270047D61B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
