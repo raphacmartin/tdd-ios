@@ -2,23 +2,29 @@
 //  CriadorDeLeilao.swift
 //  Leilao
 //
-//  Created by Raphael Martin on 28/10/21.
-//  Copyright © 2021 Alura. All rights reserved.
+//  Created by Alura Laranja on 09/05/18.
+//  Copyright © 2018 Alura. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CriadorDeLeilao: NSObject {
     
-    private var leilao: Leilao!
+    private var leilao:Leilao!
     
-    func para(descricao: String) -> Self {
+    func para(descricao:String) -> Self {
         leilao = Leilao(descricao: descricao)
         
         return self
     }
     
-    func lance(_ usuario: Usuario, _ valor: Double) -> Self {
+    func naData(data:Date) -> Self {
+        leilao.data = data
+        
+        return self
+    }
+    
+    func lance(_ usuario:Usuario, _ valor:Double) -> Self {
         leilao.propoe(lance: Lance(usuario, valor))
         
         return self
@@ -27,5 +33,4 @@ class CriadorDeLeilao: NSObject {
     func constroi() -> Leilao {
         return leilao
     }
-    
 }

@@ -19,10 +19,11 @@ class Usuario {
     }
 }
 
-extension Usuario: Equatable {
+extension Usuario:Equatable {
     static func == (lhs: Usuario, rhs: Usuario) -> Bool {
-        return lhs.id == rhs.id && lhs.nome == rhs.nome
+        if lhs.id != rhs.id || lhs.nome != rhs.nome {
+            return false
+        }
+        return true
     }
-    
-    
 }

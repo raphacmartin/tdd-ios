@@ -23,7 +23,7 @@ class LeilaoTests: XCTestCase {
         let leilao = Leilao(descricao: "Macbook Pro 15")
         XCTAssertEqual(0, leilao.lances?.count)
         
-        let steveJobs = Usuario(nome: "Steve Trampos")
+        let steveJobs = Usuario(nome: "Steve Jobs")
         leilao.propoe(lance: Lance(steveJobs, 2000.0))
         
         XCTAssertEqual(1, leilao.lances?.count)
@@ -33,7 +33,7 @@ class LeilaoTests: XCTestCase {
     func testDeveReceberVariosLances() {
         let leilao = Leilao(descricao: "Macbook Pro 15")
         
-        let steveJobs = Usuario(nome: "Steve Trampos")
+        let steveJobs = Usuario(nome: "Steve Jobs")
         leilao.propoe(lance: Lance(steveJobs, 2000.0))
         
         let billGates = Usuario(nome: "Bill Gates")
@@ -46,9 +46,9 @@ class LeilaoTests: XCTestCase {
     }
     
     func testDeveIgnorarDoisLancesSeguidosDoMesmoUsuario() {
-        let leilao = Leilao(descricao: "Macbook Pro 15")
+        let leilao = Leilao(descricao: "Macbook Pro")
         
-        let steveJobs = Usuario(nome: "Steve Trampos")
+        let steveJobs = Usuario(nome: "Steve Jobs")
         leilao.propoe(lance: Lance(steveJobs, 2000.0))
         leilao.propoe(lance: Lance(steveJobs, 2300.0))
         
@@ -56,10 +56,10 @@ class LeilaoTests: XCTestCase {
         XCTAssertEqual(2000.0, leilao.lances?.first?.valor)
     }
     
-    func testDeveIgnorarMaisDoQueCincoLancesDoMesmoUsuario() {
+    func testDeveIgnorarMaisDoQue5LancesDoMesmoUsuario() {
         let leilao = Leilao(descricao: "Macbook Pro 15")
         
-        let steveJobs = Usuario(nome: "Steve Trampos")
+        let steveJobs = Usuario(nome: "Steve Jobs")
         let billGates = Usuario(nome: "Bill Gates")
         
         leilao.propoe(lance: Lance(steveJobs, 2000.0))
@@ -74,14 +74,13 @@ class LeilaoTests: XCTestCase {
         leilao.propoe(lance: Lance(steveJobs, 8000.0))
         leilao.propoe(lance: Lance(billGates, 9000.0))
         
-        leilao.propoe(lance: Lance(steveJobs, 10000.0))
-        leilao.propoe(lance: Lance(billGates, 11000.0))
+        leilao.propoe(lance: Lance(steveJobs, 10000))
+        leilao.propoe(lance: Lance(billGates, 11000))
         
-        // deve ignorar
-        leilao.propoe(lance: Lance(steveJobs, 12000.0))
+        // deve ignorar:
+        leilao.propoe(lance: Lance(steveJobs, 12000))
         
         XCTAssertEqual(10, leilao.lances?.count)
-        XCTAssertEqual(11000.0, leilao.lances?.last?.valor)
+        XCTAssertEqual(11000, leilao.lances?.last?.valor)
     }
-    
 }
